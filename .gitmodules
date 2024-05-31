@@ -1,0 +1,8 @@
+[submodule "ladybird-git"]
+	path = ladybird-git
+	url = https://aur.archlinux.org/ladybird-git
+	branch = master
+[submodule "aseprite"]
+	path = aseprite
+	url = https://aur.archlinux.org/aseprite
+	branch = master

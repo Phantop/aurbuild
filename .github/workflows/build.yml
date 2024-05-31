@@ -24,7 +24,7 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel git
-          echo 'nobody ALL=(ALL:ALL) ALL NOPASSWD: ALL' > /etc/sudoers.d/nobody
+          echo 'nobody ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/nobody
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Bump submodules

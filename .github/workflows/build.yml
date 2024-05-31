@@ -9,24 +9,25 @@ on:
 
 jobs:
   Build: # build packages
-    strategy:
-      matrix:
-        pkg: [ 
-          aseprite,
-          ladybird-git
-        ]
-      fail-fast: false # allow package build fails
+  strategy:
+    matrix:
+      pkg: [ 
+      aseprite,
+      ladybird-git
+      ]
+    fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
     container: archlinux:latest
 
     steps:
+      - name: Update system base
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm git
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Update system base
-        run: pacman -Syu --noconfirm
       - name: Bump submodules
         run: |
-          pacman -S --noconfirm git
           git submodule update --init --remote
 
       - name: Build package

@@ -34,6 +34,7 @@ jobs:
       - name: Build package
         run: |
           cd ${{ matrix.pkg }}
+          chmod a+rwx .
           export MAKEFLAGS="--jobs=$(nproc)"
           runuser -m -u nobody -- makepkg -s
 

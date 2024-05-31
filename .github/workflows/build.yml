@@ -36,7 +36,7 @@ jobs:
           cd ${{ matrix.pkg }}
           chmod a+rwx .
           export MAKEFLAGS="--jobs=$(nproc)"
-          runuser -m -u nobody -- makepkg -s
+          runuser -m -u nobody -- makepkg -s --noconfirm
 
       - name: Upload to release
         uses: ncipollo/release-action@v1

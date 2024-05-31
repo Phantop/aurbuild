@@ -28,6 +28,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Bump submodules
         run: |
+          git config --global --add safe.directory /__w/aurbuild/aurbuild
           git submodule update --init --remote
 
       - name: Build package

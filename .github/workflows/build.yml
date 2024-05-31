@@ -22,10 +22,12 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Bump submodules
-        run: git submodule update --init --remote
       - name: Update system base
         run: sudo pacman -Syu --noconfirm
+      - name: Bump submodules
+        run: |
+          sudo pacman -S --noconfirm git
+          git submodule update --init --remote
 
       - name: Build package
         run: |

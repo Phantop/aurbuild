@@ -20,23 +20,19 @@ jobs:
     container: archlinux:latest
 
     steps:
-      - uses: actions/checkout@master
-        with:
-          submodules: true
-          ssh-key: ${{ secrets.SSH_KEY }}
-          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-
+      - name: Checkout repo
+        uses: actions/checkout@v4
       - name: Bump submodules
         run: git submodule update --init --remote
       - name: Update system base
         run: sudo pacman -Syu --noconfirm
 
-      - name: Build pkgs in above list 
+      - name: Build package
         run: |
           cd ${{ matrix.pkg }}
           makepkg -s
 
-      - name: Upload assets to release
+      - name: Upload to release
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true

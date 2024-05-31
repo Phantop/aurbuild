@@ -9,12 +9,12 @@ on:
 
 jobs:
   Build: # build packages
-  strategy:
-    matrix:
-      pkg: [ 
-      aseprite,
-      ladybird-git
-      ]
+    strategy:
+      matrix:
+        pkg: [ 
+        aseprite,
+        ladybird-git
+        ]
     fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
     container: archlinux:latest

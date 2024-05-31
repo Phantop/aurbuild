@@ -34,7 +34,8 @@ jobs:
       - name: Build package
         run: |
           cd ${{ matrix.pkg }}
-          makepkg -s
+          export MAKEFLAGS="--jobs=$(nproc)"
+          runuser -m -unobody makepkg -s
 
       - name: Upload to release
         uses: ncipollo/release-action@v1

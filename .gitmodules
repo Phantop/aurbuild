@@ -6,3 +6,19 @@
 	path = aseprite
 	url = https://aur.archlinux.org/aseprite
 	branch = master
+[submodule "pandoc-bin"]
+	path = pandoc-bin
+	url = https://aur.archlinux.org/pandoc-bin
+	branch = master
+[submodule "shellcheck-bin"]
+	path = shellcheck-bin
+	url = https://aur.archlinux.org/shellcheck-bin
+	branch = master
+[submodule "xremap-x11-bin"]
+	path = xremap-x11-bin
+	url = https://aur.archlinux.org/xremap-x11-bin
+	branch = master
+[submodule "wacom-settings-git"]
+	path = wacom-settings-git
+	url = https://aur.archlinux.org/wacom-settings-git
+	branch = master

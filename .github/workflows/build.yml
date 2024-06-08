@@ -18,10 +18,11 @@ jobs:
     container: archlinux:latest
 
     steps:
-      - name: Update system base
+      - name: Update system base and expected provider depends
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel git
+          pacman -S --noconfirm vulkan-intel
           echo 'nobody ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/nobody
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -42,5 +43,5 @@ jobs:
         with:
           allowUpdates: true
           tag: "packages"
-          artifacts: "./*/*.zst"
+          artifacts: "./*/*.zst,./*/*.sig"
           token: ${{ secrets.GITHUB_TOKEN }}

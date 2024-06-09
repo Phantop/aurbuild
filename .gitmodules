@@ -22,7 +22,7 @@
 	path = wacom-settings-git
 	url = https://aur.archlinux.org/wacom-settings-git
 	branch = master
-[submodule "ares-emu"]
-	path = ares-emu
-	url = https://aur.archlinux.org/ares-emu
+[submodule "ares-emu-avx-git"]
+	path = ares-emu-avx-git
+	url = https://aur.archlinux.org/ares-emu-avx-git
 	branch = master

@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         pkg: [ 
-        ares-emu,
+        ares-emu-avk-git,
         aseprite,
         ladybird-git
         ]

@@ -9,8 +9,8 @@ jobs:
     strategy:
       matrix:
         pkg: [ 
-        ares-emu-avk-git,
         aseprite,
+        citra,
         ladybird-git
         ]
       fail-fast: false # allow package build fails

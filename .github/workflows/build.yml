@@ -11,7 +11,8 @@ jobs:
         pkg: [ 
         aseprite,
         citra,
-        ladybird-git
+        ladybird-git,
+        miraclecast
         ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest

@@ -26,3 +26,7 @@
 	path = citra
 	url = https://aur.archlinux.org/citra
 	branch = master
+[submodule "miraclecast"]
+	path = miraclecast
+	url = https://aur.archlinux.org/miraclecast
+	branch = master

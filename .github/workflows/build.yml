@@ -12,7 +12,7 @@ jobs:
         aseprite,
         citra,
         ladybird-git,
-        miraclecast
+        xenia-git
         ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel git
-          pacman -S --noconfirm vulkan-intel
+          pacman -S --noconfirm llvm sdl2 vulkan-intel
           echo 'nobody ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/nobody
       - name: Add Chaotic-AUR for additional depends
         run: |

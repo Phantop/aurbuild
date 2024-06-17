@@ -30,3 +30,7 @@
 	path = miraclecast
 	url = https://aur.archlinux.org/miraclecast
 	branch = master
+[submodule "xenia-git"]
+	path = xenia-git
+	url = https://aur.archlinux.org/xenia-git
+	branch = master

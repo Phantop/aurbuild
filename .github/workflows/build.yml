@@ -12,6 +12,7 @@ jobs:
         aseprite,
         citra,
         ladybird-git,
+        shpool,
         xenia-git
         ]
       fail-fast: false # allow package build fails
@@ -53,5 +54,5 @@ jobs:
         with:
           allowUpdates: true
           tag: "packages"
-          artifacts: "./*/*.zst,./*/*.sig"
+          artifacts: "./*/*.zst"
           token: ${{ secrets.GITHUB_TOKEN }}

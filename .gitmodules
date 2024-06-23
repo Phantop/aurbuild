@@ -26,11 +26,11 @@
 	path = citra
 	url = https://aur.archlinux.org/citra
 	branch = master
-[submodule "miraclecast"]
-	path = miraclecast
-	url = https://aur.archlinux.org/miraclecast
-	branch = master
 [submodule "xenia-git"]
 	path = xenia-git
 	url = https://aur.archlinux.org/xenia-git
+	branch = master
+[submodule "shpool"]
+	path = shpool
+	url = https://aur.archlinux.org/shpool
 	branch = master

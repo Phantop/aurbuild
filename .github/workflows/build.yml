@@ -12,6 +12,7 @@ jobs:
         aseprite,
         citra,
         ladybird-git,
+        ly-git,
         shpool,
         xenia-git
         ]

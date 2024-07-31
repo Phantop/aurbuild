@@ -34,3 +34,7 @@
 	path = shpool
 	url = https://aur.archlinux.org/shpool
 	branch = master
+[submodule "ly-git"]
+	path = ly-git
+	url = https://aur.archlinux.org/ly-git
+	branch = master

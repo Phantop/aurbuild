@@ -38,3 +38,7 @@
 	path = ly-git
 	url = https://aur.archlinux.org/ly-git
 	branch = master
+[submodule "flyctl"]
+	path = flyctl
+	url = https://aur.archlinux.org/flyctl
+	branch = master

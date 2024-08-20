@@ -11,9 +11,8 @@ jobs:
         pkg: [ 
         aseprite,
         citra,
+        flyctl,
         ladybird-git,
-        ly-git,
-        shpool,
         xenia-git
         ]
       fail-fast: false # allow package build fails

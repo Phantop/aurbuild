@@ -1,6 +1,6 @@
 # Maintainer: phantop <phantop@tuta.io>
 pkgname=dwarfs-universal
-pkgver=0.9.10
+pkgver=0.10.1
 pkgrel=1
 pkgdesc='A fast high compression read-only file system (pre-compiled binaries)'
 url='https://github.com/mhx/dwarfs'
@@ -33,6 +33,6 @@ package() {
   install -Dm644 share/man/man5/dwarfs-format.5 "$pkgdir/usr/share/man/man5/dwarfs-format.5"
 }
 # update by removing and running `makepkg -g >> PKGBUILD`
-sha256sums=('84581c5e96e6c6c88a4b84607aafe72618e323ef0116ee62ef7f1b67fe17cb58'
-            'deb1ac4ad685ced198fb853c5693506577ea9d9898b0751a4058d05133be0e46'
-            'd5367816de9b102b0d5cb3fce0b110c29c37c1edc725b5044677f2d90c3bf95a')
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP')

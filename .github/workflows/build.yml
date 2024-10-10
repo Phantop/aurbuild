@@ -2,6 +2,9 @@ name: Build Archlinux Packages
 
 on:
   workflow_dispatch: # allow manual trigger
+  push:
+    branches:
+      - main
 
 
 jobs:
@@ -11,9 +14,7 @@ jobs:
         pkg: [ 
         aseprite,
         citra,
-        flyctl,
         ladybird-git,
-        xenia-git
         ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
@@ -24,7 +25,7 @@ jobs:
         run: |
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel git
-          pacman -S --noconfirm llvm sdl2 vulkan-intel
+          pacman -S --noconfirm llvm ninja sdl2 vulkan-intel
           echo 'nobody ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/nobody
       - name: Add Chaotic-AUR for additional depends
         run: |

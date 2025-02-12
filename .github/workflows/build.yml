@@ -22,9 +22,9 @@ jobs:
       - name: Update system base and expected provider depends
         run: |
           pacman -Syu --noconfirm
-          pacman -S --noconfirm base-devel git
+          pacman -S --noconfirm base-devel doas git
           pacman -S --noconfirm llvm ninja sdl2 vulkan-intel
-          echo 'nobody ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/nobody
+          echo 'permit nopass nobody' > /etc/doas.conf
       - name: Add Chaotic-AUR for additional depends
         run: |
           pacman-key --init
@@ -46,6 +46,7 @@ jobs:
           cd ${{ matrix.pkg }}
           chmod a+rwx .
           export MAKEFLAGS="--jobs=$(nproc)"
+          export PACMAN_AUTH=doas
           runuser -m -u nobody -- makepkg -s --noconfirm
 
       - name: Upload to release

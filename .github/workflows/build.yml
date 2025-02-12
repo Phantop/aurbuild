@@ -13,8 +13,6 @@ jobs:
       matrix:
         pkg: [ 
         aseprite,
-        citra,
-        ladybird-git,
         ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest

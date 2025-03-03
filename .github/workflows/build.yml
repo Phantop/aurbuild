@@ -13,6 +13,7 @@ jobs:
       matrix:
         pkg: [ 
         aseprite,
+        ladybird-git
         ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
@@ -47,6 +48,7 @@ jobs:
           chmod a+rwx .
           export MAKEFLAGS="--jobs=$(nproc)"
           export PACMAN_AUTH=doas
+          usermod --expiredate 2050-01-01 nobody
           runuser -m -u nobody -- makepkg -s --noconfirm
 
       - name: Upload to release

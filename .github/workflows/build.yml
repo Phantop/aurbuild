@@ -13,6 +13,7 @@ jobs:
       matrix:
         pkg: [ 
         aseprite,
+        azahar-git,
         ladybird-git
         ]
       fail-fast: false # allow package build fails

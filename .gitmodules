@@ -42,3 +42,7 @@
 	path = flyctl
 	url = https://aur.archlinux.org/flyctl
 	branch = master
+[submodule "azahar-git"]
+	path = azahar-git
+	url = https://aur.archlinux.org/azahar-git
+	branch = master

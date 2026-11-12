@@ -50,4 +50,4 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: arch-${{ matrix.pkg }}
-          path: */*.zst
+          path: ./*/*.zst

@@ -1,21 +1,15 @@
 name: Build Archlinux Packages
-
 on:
   workflow_dispatch: # allow manual trigger
   push:
     branches:
       - main
 
-
 jobs:
   Build: # build packages
     strategy:
       matrix:
-        pkg: [ 
-        aseprite,
-        azahar-git,
-        ladybird-git
-        ]
+        pkg: [ aseprite ]
       fail-fast: false # allow package build fails
     runs-on: ubuntu-latest
     container: archlinux:latest
@@ -52,10 +46,8 @@ jobs:
           usermod --expiredate 2050-01-01 nobody
           runuser -m -u nobody -- makepkg -s --noconfirm
 
-      - name: Upload to release
-        uses: ncipollo/release-action@v1
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          allowUpdates: true
-          tag: "packages"
-          artifacts: "./*/*.zst"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: arch-${{ matrix.pkg.name }}
+          path: */*.zst
